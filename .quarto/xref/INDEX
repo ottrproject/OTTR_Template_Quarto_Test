@@ -1,0 +1,20 @@
+{
+  "index.qmd": {
+    "index.html": "e939dc1e"
+  },
+  "intro.qmd": {
+    "intro.html": "ecc19d2d"
+  },
+  "first-section-new-chapter.qmd": {
+    "first-section-new-chapter.html": "69a3c3eb"
+  },
+  "conclusion.qmd": {
+    "conclusion.html": "fd1e53f7"
+  },
+  "references.qmd": {
+    "references.html": "241ab112"
+  },
+  "404.qmd": {
+    "404.html": "5ce13e67"
+  }
+}
