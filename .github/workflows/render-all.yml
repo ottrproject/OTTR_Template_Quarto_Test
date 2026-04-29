@@ -1,5 +1,5 @@
 # Candace Savonen 2021
-# Updated April 2025
+# Updated Nov 2025
 
 name: Render all output courses
 
@@ -12,6 +12,9 @@ on:
       - '*.Rmd'
       - assets/*
       - quizzes/*
+      - '*.yml'
+      - 'GA_Script.html'
+      - 'GA_Script.Rhtml'
 
 jobs:
 
@@ -20,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
         # Use the yaml-env-action action.
       - name: Load environment from YAML
@@ -39,7 +42,6 @@ jobs:
     name: Render course preview
     needs: yaml-check
     runs-on: ubuntu-latest
-    
 
     steps:
       - name: Run render
@@ -61,7 +63,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
@@ -109,7 +111,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
@@ -188,7 +190,7 @@ jobs:
 
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
